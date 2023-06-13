@@ -1,0 +1,130 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+// sass scss/styles.scss css/styles.css
+
+$maincolor: rgb(247, 0, 255);
+$backgroundcolor: rgb(173, 69, 177);
+@property --colorOne {
+    syntax: '<color>';
+    initial-value: $maincolor;
+    inherits: false;
+}
+
+@property --colorTwo { //@property rule
+    syntax: '<color>';
+    initial-value: rgb(110, 1, 114);
+    inherits: false;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient($backgroundcolor,rgb(115, 185, 226));
+    background-repeat: no-repeat;
+    max-width: 90%;
+    margin: 3% auto;
+    padding: 0 10px;
+}
+
+.nav {
+    --bs-nav-link-color:rgb(180, 173, 241);
+    --bs-nav-link-hover-color: rgb(197, 196, 204);
+    border-radius: 8px 8px 0 0;
+}
+
+.nav-item {
+    width: 25%;
+}
+
+.container-fluid {
+    .row {
+        .col-btn {
+            border: 0px;
+            border-radius: 0px;
+            background: linear-gradient(to bottom right, var(--colorOne), var(--colorTwo));
+            transition: --colorOne 0.7s, --colorTwo 0.7s, color 0.7s;
+            color: rgb(235, 231, 231);
+            
+            .btn {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.col-btn:hover {
+    --colorOne:rgb(0, 255, 98);
+    --colorTwo:rgb(26, 114, 110);
+    color: rgb(31, 30, 30);
+}
+
+.btn-primary, #datetime {
+    width: 50%;
+    border-radius: 0%;
+    border-color: none;
+}
+
+#datetime {
+    text-align: center;
+    color: rgb(235, 231, 231);
+    margin-bottom: 0;
+}
+
+.container-logo, .container-content {
+    margin-left: 0;
+}
+
+.wrap {
+    border: 1px solid rgb(241, 237, 237);
+    background-color: rgb(241, 237, 237);
+    border-radius: 15px;
+    padding: 8px;
+}
+
+.container-content {
+    background-color: rgb(19 1 60);
+    border-radius: 0 0 8px 8px;
+}
+
+.container-fluid {
+    .row {
+        .col, .col-6 {
+            color: rgb(235, 231, 231);
+            height: 75px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+
+.row-date {
+    .btn-primary, #datetime {
+        background-color: #4c14db;
+        border: 0px;
+    }
+    background-color: #4c14db;
+}
+
+.myTooltip:hover::after {
+    content: attr(data-tooltip);
+    z-index: 1;
+    padding: 3px 7px;
+    margin-top: -5%;
+    color: #FFF;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px 8px 8px 0px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+
+// для мобилок - все, что меньше 768 пикселей
+@media (max-width:767px){
+    .nav-link-last, .nav-link {
+        font-size: 0.8rem;
+        height: 100%;
+    }
+}

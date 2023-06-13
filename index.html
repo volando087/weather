@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css"> -->
+</head>
+<body>
+    <div class="container container-logo">
+        <div class="row align-items-center">
+            <div class="col col-lg-1">
+                <img class="nav-logo mr-auto" src="img/logo.png" alt="img/logo.png">
+            </div>
+            <div class="col col-lg-5 myTooltip" data-tooltip="Другие города появятся позже.">
+                <select class="form-select" disabled>
+                    <option class="option" value="1" selected>Москва</option>
+                    <option class="option" value="2">Санкт-Петербург</option>
+                    <option class="option" value="3">Новосибирск</option>
+                    <option class="option" value="4">Екатерининбург</option>
+                    <option class="option" value="5">Казань</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="information">
+            <div class="container-fluid">
+                <div class="row row-date">
+                    <div class="col col-btn">
+                        <button type="button" class="btn brn-primary nav-link nav-link-first" id="nowButton">Сегодня</button>
+                    </div>
+                    <div class="col col-btn">
+                        <button type="button" class="btn brn-primary nav-link" id="tomorrowButton">Завтра</button>
+                    </div>
+                    <div class="col col-btn">
+                        <button type="button" class="btn brn-primary nav-link" id="threeDaysButton">3 дня</button>
+                    </div>
+                    <div class="col col-btn">
+                        <button type="button" class="btn brn-primary nav-link nav-link-last" id="fiveDaysButton">5 дней</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="information">
+            <div class="container-fluid">
+                <div class="row row-date">
+                    <button type="button" class="btn btn-primary" id="getInfo">Получить данные</button>
+                    <p id="datetime">2313</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid container-content">
+            <div class="row align-items-start">
+                <div class="col-6" id="temperatureContent">Температура воздуха, C°: </div>
+                <div class="col" id="humidityContent">Влажность, %: </div>
+            </div>
+            <div class="row align-items-start">
+                <div class="col" id="tempFeelsContent">Ощущаемая температура воздуха, C°: </div>
+                <div class="col" id="pressureContent">Давление, мм. рт. ст.: </div>
+            </div>
+            <div class="row align-items-start">
+                <div class="col-6" id="windContent">Скорость ветра, м/с: </div>
+                <div class="col" id="sunriseContent">Восход: </div>
+            </div>
+            <div class="row align-items-start">
+                <div class="col-6" id="windDegreesContent">Направление ветра: </div>
+                <div class="col" id="sunsetContent">Заход: </div>
+            </div>
+        </div>
+    
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
+
+
